@@ -3,9 +3,26 @@
 
     <style>
         body {
-            background-image: linear-gradient(40deg, hsla(220, 90%, 20%, 0.9), hsla(260, 40%, 50%, 0.9)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-image: linear-gradient(40deg, hsla(220, 90%, 20%, 0.8), hsla(260, 40%, 50%, 0.8)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
             background-size: cover;
             background-position: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: white;
+        }
+
+        #title {
+            text-align: center;
+            margin-top: 64px;
+        }
+
+        #description {
+            text-align: center;
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        #survey-form {
+            background: hsla(240, 40%, 20%, 0.7);
         }
     </style>
 </head>
@@ -16,9 +33,18 @@
     </header>
     <main>
         <form id="survey-form">
-            <label>
-                <input type="text" placeholder="Enter your name" required />
-            </label>
+            <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter your name" required />
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter your Email" required />
+            </div>
+            <div>
+                <label for="number">Age (optional)</label>
+                <input id="number" type="number" min="10" max="99" />
+            </div>
         </form>
     </main>
 
