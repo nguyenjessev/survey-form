@@ -2,11 +2,16 @@
     <link href="normalize.css" rel="stylesheet" type="text/css" />
 
     <style>
+        html {
+            height: 100vh;
+        }
+
         body {
-            background-image: linear-gradient(40deg, hsla(220, 90%, 20%, 0.8), hsla(260, 40%, 50%, 0.8)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background: linear-gradient(60deg, hsla(220, 90%, 20%, 0.8), hsla(260, 40%, 50%, 0.8)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
             background-size: cover;
             background-position: center;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-repeat: no-repeat;
+            font-family: Helvetica, sans-serif;
             color: white;
         }
 
@@ -18,11 +23,11 @@
         #description {
             text-align: center;
             font-style: italic;
-            font-weight: normal;
         }
 
         #survey-form {
             background: hsla(240, 40%, 20%, 0.7);
+            margin-top: 32px;
         }
     </style>
 </head>
@@ -34,16 +39,38 @@
     <main>
         <form id="survey-form">
             <div>
-                <label for="name">Name</label>
+                <label id="name-label" for="name">Name</label>
                 <input id="name" type="text" placeholder="Enter your name" required />
             </div>
             <div>
-                <label for="email">Email</label>
+                <label id="email-label" for="email">Email</label>
                 <input id="email" type="email" placeholder="Enter your Email" required />
             </div>
             <div>
-                <label for="number">Age (optional)</label>
-                <input id="number" type="number" min="10" max="99" />
+                <label id="number-label" for="number">Age (optional)</label>
+                <input id="number" type="number" min="10" max="99" placeholder="Age"/>
+            </div>
+            <div>
+                <label id="dropdown-label" for="dropdown">Which option best describes your current role?</label>
+                <select id="dropdown">
+                    <option disabled selected>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="full-time-job">Full Time Job</option>
+                    <option value="full-time-learner">Full Time Learner</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <input id="recommend-definitely" type="radio" name="recommend" value="definitely" />
+                <label for="recommend-definitely">Definitely</label>
+
+                <input id="recommend-maybe" type="radio" name="recommend" value="maybe" />
+                <label for="recommend-maybe">Maybe</label>
+
+                <input id="recommend-not-sure" type="radio" name="recommend" value="not-sure" />
+                <label for="recommend-not-sure">Not sure</label>
             </div>
         </form>
     </main>
