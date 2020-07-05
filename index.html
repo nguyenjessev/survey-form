@@ -10,7 +10,8 @@
         }
 
         body {
-            background: linear-gradient(60deg, hsla(220, 90%, 20%, 0.8), hsla(260, 40%, 50%, 0.8)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-color: hsl(260, 100%, 5%);
+            background-image: linear-gradient(60deg, hsla(220, 90%, 20%, 0.8), hsla(260, 40%, 50%, 0.8)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -30,7 +31,24 @@
 
         #survey-form {
             background: hsla(240, 40%, 20%, 0.7);
-            margin-top: 32px;
+            margin: 32px auto;
+            max-width: 640px;
+            padding: 48px;
+            border-radius: 0.5rem;
+        }
+
+        label {
+            font-size: 1.2rem;
+        }
+
+        .input-field {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding-left: 12px;
+            margin: 12px 0 24px 0;
+            border: 1px solid;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -43,19 +61,19 @@
         <form id="survey-form">
             <div>
                 <label id="name-label" for="name">Name</label>
-                <input id="name" type="text" placeholder="Enter your name" required />
+                <input id="name" class="input-field" type="text" placeholder="Enter your name" required />
             </div>
             <div>
                 <label id="email-label" for="email">Email</label>
-                <input id="email" type="email" placeholder="Enter your Email" required />
+                <input id="email" class="input-field" type="email" placeholder="Enter your Email" required />
             </div>
             <div>
                 <label id="number-label" for="number">Age (optional)</label>
-                <input id="number" type="number" min="10" max="99" placeholder="Age"/>
+                <input id="number" class="input-field" type="number" min="10" max="99" placeholder="Age"/>
             </div>
             <div>
                 <label id="dropdown-label" for="dropdown">Which option best describes your current role?</label>
-                <select id="dropdown">
+                <select id="dropdown" class="input-field">
                     <option disabled selected>Select current role</option>
                     <option value="student">Student</option>
                     <option value="full-time-job">Full Time Job</option>
@@ -66,14 +84,28 @@
             </div>
             <div>
                 <p>Would you recommend freeCodeCamp to a friend?</p>
-                <input id="recommend-definitely" type="radio" name="recommend" value="definitely" />
-                <label for="recommend-definitely">Definitely</label>
-
-                <input id="recommend-maybe" type="radio" name="recommend" value="maybe" />
-                <label for="recommend-maybe">Maybe</label>
-
-                <input id="recommend-not-sure" type="radio" name="recommend" value="not-sure" />
-                <label for="recommend-not-sure">Not sure</label>
+                <div>
+                    <input id="recommend-definitely" type="radio" name="recommend" value="definitely" />
+                    <label for="recommend-definitely">Definitely</label>
+                </div>
+                <div>
+                    <input id="recommend-maybe" type="radio" name="recommend" value="maybe" />
+                    <label for="recommend-maybe">Maybe</label>
+                </div>
+                <div>
+                    <input id="recommend-not-sure" type="radio" name="recommend" value="not-sure" />
+                    <label for="recommend-not-sure">Not sure</label>
+                </div>
+            </div>
+            <div>
+                <label>What is your favorite feature of freeCodeCamp?</label>
+                <select class="input-field">
+                    <option disabled selected>Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open-source">Open Source</option>
+                </select>
             </div>
         </form>
     </main>
