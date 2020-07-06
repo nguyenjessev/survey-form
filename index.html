@@ -35,6 +35,7 @@
             max-width: 640px;
             padding: 48px;
             border-radius: 0.5rem;
+            font-size: 1.2rem;
         }
 
         .input-group {
@@ -44,7 +45,6 @@
         }
 
         .input-label {
-            font-size: 1.2rem;
             margin: 0 0 8px 0;
         }
 
@@ -54,6 +54,25 @@
             padding-left: 12px;
             border: 1px solid;
             border-radius: 4px;
+        }
+
+        [type="radio"], [type="checkbox"] {
+            margin-bottom: 16px;
+        }
+
+        #comment-box {
+            min-height: 128px;
+            resize: vertical;
+            padding-top: 8px;
+        }
+
+        #submit-button {
+            width: 100%;
+            height: 48px;
+            border-radius: 4px;
+            border: 1px solid;
+            background: hsl(140, 79%, 46%);
+            cursor: pointer;
         }
     </style>
 </head>
@@ -90,7 +109,7 @@
             <div class="input-group">
                 <p class="input-label">Would you recommend freeCodeCamp to a friend?</p>
                 <div>
-                    <input id="recommend-definitely" type="radio" name="recommend" value="definitely" />
+                    <input id="recommend-definitely" type="radio" name="recommend" value="definitely" checked />
                     <label for="recommend-definitely">Definitely</label>
                 </div>
                 <div>
@@ -112,6 +131,58 @@
                     <option value="open-source">Open Source</option>
                 </select>
             </div>
+            <div class="input-group">
+                <p class="input-label">What would you like to see improved? (Check all that apply)</p>
+                <div>
+                    <input id="improve-front-end" type="checkbox" name="improve" value="front-end" />
+                    <label for="improve-front-end">Front-end Projects</label>
+                </div>
+                <div>
+                    <input id="improve-back-end" type="checkbox" name="improve" value="back-end" />
+                    <label for="improve-back-end">Back-end Projects</label>
+                </div>
+                <div>
+                    <input id="improve-data-visualization" type="checkbox" name="improve" value="data-visualization" />
+                    <label for="improve-data-visualization">Data Visualization</label>
+                </div>
+                <div>
+                    <input id="improve-challenges" type="checkbox" name="improve" value="challenges" />
+                    <label for="improve-challenges">Challenges</label>
+                </div>
+                <div>
+                    <input id="improve-open-source-community" type="checkbox" name="improve" value="open-source-community" />
+                    <label for="improve-open-source-community">Open Source Community</label>
+                </div>
+                <div>
+                    <input id="improve-gitter-help" type="checkbox" name="improve" value="gitter-help" />
+                    <label for="improve-gitter-help">Gitter Help Rooms</label>
+                </div>
+                <div>
+                    <input id="improve-videos" type="checkbox" name="improve" value="videos" />
+                    <label for="improve-videos">Videos</label>
+                </div>
+                <div>
+                    <input id="improve-city-meetups" type="checkbox" name="improve" value="city-meetups" />
+                    <label for="improve-city-meetups">City Meetups</label>
+                </div>
+                <div>
+                    <input id="improve-wiki" type="checkbox" name="improve" value="wiki" />
+                    <label for="improve-wiki">Wiki</label>
+                </div>
+                <div>
+                    <input id="improve-forum" type="checkbox" name="improve" value="forum" />
+                    <label for="improve-forum">Forum</label>
+                </div>
+                <div>
+                    <input id="improve-additional-courses" type="checkbox" name="improve" value="additional-courses" />
+                    <label for="improve-additional-courses">Additional Courses</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label id="comments-label" class="input-label" for="comment-box">Any comments or suggestions?</label>
+                <textarea id="comment-box" class="input-field" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <button id="submit-button" form="survey-form" type="submit">Submit</button>
         </form>
     </main>
 
