@@ -3,7 +3,7 @@ This is my recreation of the Survey Form project from freecodecamp
 https://codepen.io/freeCodeCamp/full/VPaoNP
 
 ## Problems
-I had problems with compatibility of the background with different browsers, as well as getting the page to scale properly on devices of different sizes
+I had to create a form using different input types, label options correctly, and style the page and align items correctly. I also had to figure out how to make the page scale appropriately on differently sized devices
 
 ## What I used
 HTML, CSS, meta viewport tag
